@@ -11,6 +11,12 @@ const itemVariants = {
     opacity: 1,
     y: 0,
   },
+  hover: {
+    y: -8,
+    transition: {
+      duration: 0.3,
+    },
+  },
 }
 
 export function SocialList({ className }: { className?: string }) {
@@ -27,7 +33,7 @@ export function SocialList({ className }: { className?: string }) {
       }}
     >
       {hero.socials.map((social) => (
-        <motion.li key={social.name} variants={itemVariants}>
+        <motion.li key={social.name} variants={itemVariants} whileHover="hover">
           <a
             className="relative size-9 text-white text-xl flex justify-center items-center group"
             href={social.url}
