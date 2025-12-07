@@ -32,6 +32,11 @@
 html {
   color: theme('textColor.primary');
   background-color: theme('backgroundColor.root');
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   scroll-padding-top: 64px;
 }
 

@@ -37,9 +37,9 @@ const config: Config = {
         secondary: 'rgb(var(--color-text-secondary))',
       },
       backgroundColor: {
-        root: 'rgb(var(--color-bg-root))',
-        primary: 'rgb(var(--color-bg-primary))',
-        secondary: 'rgb(var(--color-bg-secondary))',
+        root: 'rgb(var(--color-bg-root) / <alpha-value>)',
+        primary: 'rgb(var(--color-bg-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-bg-secondary) / <alpha-value>)',
       },
       borderColor: {
         primary: 'rgb(var(--color-border-primary))',
