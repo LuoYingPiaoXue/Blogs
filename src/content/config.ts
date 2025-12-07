@@ -16,16 +16,6 @@ const postsCollection = defineCollection({
   }),
 })
 
-const projectsCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    image: z.string(),
-    link: z.string().url(),
-  }),
-})
-
 const specCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -47,7 +37,6 @@ const friendsCollection = defineCollection({
 
 export const collections = {
   posts: postsCollection,
-  projects: projectsCollection,
   spec: specCollection,
   friends: friendsCollection,
 }
