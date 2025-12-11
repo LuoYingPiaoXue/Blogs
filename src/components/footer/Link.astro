@@ -5,13 +5,13 @@ interface Props extends HTMLAttributes<'a'> {
   href: string
 }
 
-const { href, ...attrs } = Astro.props
+const { href, class: className, ...attrs } = Astro.props
 
 const isExternal = href.startsWith('http')
 ---
 
 <a
-  class="hover:text-accent"
+  class={`hover:text-accent transition-colors duration-200 ${className || ''}`}
   href={href}
   target={isExternal ? '_blank' : undefined}
   rel={isExternal ? 'noopener noreferrer' : undefined}

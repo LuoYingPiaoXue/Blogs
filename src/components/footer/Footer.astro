@@ -1,6 +1,6 @@
 ---
 import { ThemeSwitch } from './ThemeSwitch'
-import { author, footer } from '@/config.json'
+import { author, footer, hero, menus } from '@/config.json'
 import { getAllPostsWordCount } from '@/utils/content'
 import { RunningDays } from './RunningDays'
 import Link from './Link.astro'
@@ -10,43 +10,43 @@ const thisYear = new Date().getFullYear()
 const copyDate = sinceYear === thisYear ? thisYear : `${sinceYear} - ${thisYear}`
 
 const wordCount = await getAllPostsWordCount()
-
 const wordCountStr = (wordCount / 1000).toFixed(1) + 'k'
 ---
 
-<footer class="relative z-1 py-8 px-4 md:px-8 text-secondary text-sm">
-  <div class="text-center space-y-2">
-    <div>
-      基于
-      <Link href="https://github.com/lxchapu/astro-gyoza" target="_blank">
-        Gyoza
-      </Link>
-      主题，由
-      <Link href="https://astro.build/">Astro</Link>
-      强力驱动
+<footer data-hide-print class="relative z-1 mt-16 border-t border-primary bg-primary/30 backdrop-saturate-150 backdrop-blur-lg py-6 px-4 md:px-8 text-secondary text-sm">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end gap-4">
+    <div class="flex-1 space-y-2 text-center md:text-left">
+      {/* 第一行：座右铭 */}
+      <div class="text-sm font-medium opacity-90">
+        Stay hungry. Stay foolish.
+      </div>
+
+      {/* 第二行：版权与基础信息 */}
+      <div class="flex flex-wrap justify-center md:justify-start items-center gap-x-3 gap-y-1 text-xs opacity-80">
+         <span>&copy; {copyDate} <Link href="/">{author.name}</Link>.</span>
+         <span class="opacity-30">|</span>
+         <Link href="/rss.xml" data-no-swup>RSS</Link>
+         <span class="opacity-30">|</span>
+         <Link href="/sitemap-index.xml" data-no-swup>站点地图</Link>
+      </div>
+
+      {/* 第三行：技术栈与统计 */}
+      <div class="flex flex-wrap justify-center md:justify-start items-center gap-x-3 gap-y-1 text-xs opacity-70">
+         <span>Powered by <Link href="https://astro.build/" target="_blank">Astro</Link> & <Link href="https://github.com/lxchapu/astro-gyoza" target="_blank">Gyoza</Link></span>
+         <span class="opacity-30">|</span>
+         <Link href="http://beian.miit.gov.cn/" target="_blank">陕ICP备2025082734号-1</Link>
+         <span class="opacity-30">|</span>
+         <RunningDays client:only="react" />
+         <span class="opacity-30">|</span>
+         <span>共 {wordCountStr} 字</span>
+      </div>
+
     </div>
-    <div class="space-x-1">
-      <span>&copy;{copyDate} <Link href="/">{author.name}</Link>.</span>
-      <Link href="/rss.xml" data-no-swup>
-        <i class="iconfont icon-rss"></i>
-        <span>RSS</span>
-      </Link>
-      <Link href="/sitemap-index.xml" data-no-swup>
-        <i class="iconfont icon-map"></i>
-        <span>站点地图</span>
-      </Link>
+
+    {/* 右侧：主题切换 */}
+    <div class="flex-shrink-0">
+        <ThemeSwitch client:only="react" />
     </div>
-    <div>
-      <RunningDays client:only="react" />
-      <span class="select-none opacity-50">|</span>
-      <span>共嘚嘚了 {wordCountStr} 字</span>
-    </div>
-    <div>
-      <Link href="http://beian.miit.gov.cn/" target="_blank">
-        <span class="font-bold">陕ICP备2025082734号-1</span>
-      </Link>
-  </div>
-  <div class="mt-4 flex justify-center">
-    <ThemeSwitch client:only="react" />
+
   </div>
 </footer>

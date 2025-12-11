@@ -89,19 +89,24 @@
       "icon": "icon-pantone"
     },
     {
+      "name": "文稿",
+      "link": "/manuscripts",
+      "icon": "icon-pen"
+    },
+    {
       "name": "归档",
       "link": "/archives",
       "icon": "icon-archive"
     },
     {
-      "name": "关于",
-      "link": "/about",
-      "icon": "icon-ghost"
-    },
-    {
       "name": "友链",
       "link": "/friends",
       "icon": "icon-hearts"
+    },
+    {
+      "name": "关于",
+      "link": "/about",
+      "icon": "icon-ghost"
     }
   ],
   "posts": {
