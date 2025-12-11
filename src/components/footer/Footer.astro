@@ -18,7 +18,7 @@ const wordCountStr = (wordCount / 1000).toFixed(1) + 'k'
     <div class="flex-1 space-y-2 text-center md:text-left">
       {/* 第一行：座右铭 */}
       <div class="text-sm font-medium opacity-90">
-        Stay hungry. Stay foolish.
+        {footer.bio}
       </div>
 
       {/* 第二行：版权与基础信息 */}
@@ -34,7 +34,7 @@ const wordCountStr = (wordCount / 1000).toFixed(1) + 'k'
       <div class="flex flex-wrap justify-center md:justify-start items-center gap-x-3 gap-y-1 text-xs opacity-70">
          <span>Powered by <Link href="https://astro.build/" target="_blank">Astro</Link> & <Link href="https://github.com/lxchapu/astro-gyoza" target="_blank">Gyoza</Link></span>
          <span class="opacity-30">|</span>
-         <Link href="http://beian.miit.gov.cn/" target="_blank">陕ICP备2025082734号-1</Link>
+         <Link href="http://beian.miit.gov.cn/" target="_blank">{footer.icp}</Link>
          <span class="opacity-30">|</span>
          <RunningDays client:only="react" />
          <span class="opacity-30">|</span>
