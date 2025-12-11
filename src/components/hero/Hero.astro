@@ -14,9 +14,9 @@ import { Hitokoto } from './Hitokoto'
       <h1 class="text-3xl text-center lg:text-left text-balance">
         <TextUpTransition client:load eachDelay={0.05} initialDelay={0} text="嗨，你好，这里是 " />
         <span class="relative font-bold">
-          <span class="absolute -z-1 top-[30%] left-0 w-full h-[40%] bg-accent/30"></span>
+        <Highlight class="font-bold">
           <TextUpTransition client:load eachDelay={0.05} initialDelay={0.7} text={hero.name} />
-        </span>
+        </Highlight>
         <TextUpTransition client:load eachDelay={0.05} initialDelay={1.2} text="👋" />
         <br />
         <TextUpTransition client:load eachDelay={0.05} initialDelay={1.4} text={hero.bio} />

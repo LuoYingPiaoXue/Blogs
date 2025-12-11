@@ -10,12 +10,15 @@ comments: false
 
 业余是一名VOCALOID调教师/~~PV/混音（实际这俩一点也不精通）~~
 
-## 致谢
+## 关于本站
 
-感谢以下项目：
+这个网站是基于 [Astro](https://astro.build/) 框架搭建的，在 [Gyoza](https://github.com/lxchapu/astro-gyoza) 主题的基础上，参照 Mix Space 的 Shiro 主题进行了部分自定义和优化，在此感谢原作者和主题作者的辛勤付出！
+
+本站使用了以下开源项目：
 
 - [Astro](https://astro.build/)
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Jotai](https://jotai.org/)
+- [Gyoza Theme](https://github.com/lxchapu/astro-gyoza)
