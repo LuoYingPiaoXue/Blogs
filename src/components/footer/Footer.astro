@@ -34,7 +34,12 @@ const wordCountStr = (wordCount / 1000).toFixed(1) + 'k'
       <div class="flex flex-wrap justify-center md:justify-start items-center gap-x-3 gap-y-1 text-xs opacity-70">
          <span>Powered by <Link href="https://astro.build/" target="_blank">Astro</Link> & <Link href="https://github.com/lxchapu/astro-gyoza" target="_blank">Gyoza</Link></span>
          <span class="opacity-30">|</span>
-         <Link href="http://beian.miit.gov.cn/" target="_blank">{footer.icp}</Link>
+         <Link href="http://beian.miit.gov.cn/" target="_blank">陕ICP备2025082734号</Link>
+         <span class="opacity-30">|</span>
+         <Link href="https://beian.mps.gov.cn/#/query/webSearch?code=61011602000746" target="_blank" class="inline-flex items-center">
+           <img src="/beian.png" alt="" class="w-4 h-4 mr-1" />
+           陕公网安备61011602000746号
+         </Link>
          <span class="opacity-30">|</span>
          <RunningDays client:only="react" />
          <span class="opacity-30">|</span>

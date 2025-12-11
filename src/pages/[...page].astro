@@ -13,6 +13,13 @@ import Hero from '@/components/hero/Hero.astro'
 
 export const getStaticPaths = (async () => {
   const sortedPosts = await getSortedPosts()
+  if (sortedPosts.length === 0) {
+    return [{
+      params: { page: undefined },
+      props: { currentPage: 1, totalPage: 1, data: [] }
+    }]
+  }
+
   const { perPage } = appConfig.posts
   const totalPage = Math.ceil(sortedPosts.length / perPage)
 
